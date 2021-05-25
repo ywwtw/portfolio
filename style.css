@@ -1,5 +1,4 @@
-.typing1::after, 
-.typing2::after{
+.typing1::after{
   content: "";
   right: -10px;
   width: 3px;
@@ -8,6 +7,12 @@
   animation: blink .8s infinite ease;
 }
 .typing2::after{
+  content: "";
+  right: -10px;
+  width: 3px;
+  height: 80%;
+  border-right: 3px solid ;
+  animation: blink .8s infinite ease;
   opacity: 0;
   animation-delay: 4s;
 }
