@@ -1,4 +1,4 @@
-const text1 = "Hello! I'm Yvonne.",
+const text1 = "Hello! I'm YingWen.",
       text2 = "I'm a designer & developer.";   
 let index = 0;
 
