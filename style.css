@@ -14,7 +14,7 @@
   border-right: 3px solid ;
   animation: blink .8s infinite ease;
   opacity: 0;
-  animation-delay: 4s;
+  animation-delay: 5s;
 }
 
 @keyframes blink{
