@@ -10,8 +10,7 @@
 	max-width: 1440px;
 	margin: auto;
 	display: flex;
-	font-family: Segoe UI;
-	font-style: normal;
+  font-family: 'Poppins', sans-serif;
 	font-weight: normal;
 }
 #main {
@@ -94,7 +93,6 @@ nav div {
 .about-img-container{
 	width: 100%;
 	height: 100%;
-	background-color: rgb(231, 219, 193);
 	overflow: hidden;
 	position: relative;
 }
