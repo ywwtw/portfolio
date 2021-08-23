@@ -159,7 +159,7 @@ figure{
 	overflow: hidden;
 	text-align: center;
 }
-#flyer,#brochure1,#poster4-01{
+#flyer,#poster4-01{
 	margin-top: 5%;
 }
 .enlarge{
@@ -227,7 +227,7 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 	margin-bottom: 60px;
 }
 .contact-img{
-	filter: grayscale(80%);
+	filter: grayscale(100%);
 	text-align: center;
 	width: 40vw;
 	height: auto;
@@ -238,14 +238,20 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 	width: 100%;
 	height: auto;
 }
-.links a{
+.contactBtn{
 	font-weight: bold;
 	background-color: #EEEEEE;
 	border-radius: 50px;
 	padding: 4px 20px;
 	margin-right: 20px;
 }
-
+.contactBtn:hover{
+	background-color: #000;
+	color: #fff;
+}
+.contactBtn:hover .fas{
+	color: #fff;
+}
 @media (max-width: 1199.98px) { 
 	#about{
 		height: 50vh;
@@ -284,6 +290,9 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 		padding: 0;
 		position: relative;
 	}
+	#about-img{
+		max-height: 100%;
+	}
 	#sideDiv{
 		display: none;
 	}
@@ -299,7 +308,7 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 30px;
+		padding: 20px;
 		background-color: transparent;
 		box-shadow: none;
 	}
