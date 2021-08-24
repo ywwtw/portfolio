@@ -76,7 +76,6 @@ nav div {
 	font-weight: bold;
 	padding: 30px;
 	border-bottom: 1px solid #888888;
-	z-index: 3;
 }
 .closemenu{
 	padding: 30px;
@@ -146,9 +145,18 @@ nav div {
 }
 figure{
 	width: 280px;
-	height: 220px;
+	height: 260px;
 	margin: 0 auto 70px;
 	cursor: pointer;
+}
+.gowebsite{
+	position: relative;
+}
+.gowebsite img{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 100%;
 }
 .imgbox{
 	display: block;
@@ -161,9 +169,6 @@ figure{
 	overflow: hidden;
 	text-align: center;
 }
-#flyer,#poster4-01,#banner2-01{
-	margin-top: 5%;
-}
 .enlarge{
 	background: #EEEEEE;
 	position: absolute;
@@ -174,7 +179,7 @@ figure{
 	transform: translate(-50%,-50%);
 	opacity: 0;
 	object-fit: cover;
-	z-index: 5;
+	z-index: 2;
 }
 .normal{
     width: 100%;
@@ -284,8 +289,7 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 	height: auto;
 	background-color: #fff;
 	margin: auto;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 15%;
 	padding: 30px 0;
 	position: relative;
 }
@@ -301,7 +305,6 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 	width: 100%;
 	height: auto;
 	object-fit: contain;
-    z-index: 6;
 }
 .hidden{
     overflow: hidden;
@@ -357,13 +360,13 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 	}
 	header{
 		position: fixed;
-		z-index: 5;
+		z-index: 4;
 	}
 	#navbar{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 20px;
+		padding: 30px;
 		background-color: transparent;
 		box-shadow: none;
 	}
@@ -390,12 +393,18 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 		height: 100vh;
 	}
 	.contact-img{
-		width: 50vw;
+		width: 60vw;
 	}
 	.modal{
 		width: 100%;
-		margin-top: 90px;
 		padding: 0;
+	}
+	.closeModal{
+		top: 15%;
+		font-size: 46px;
+	}
+	.modalElem{
+		max-width: 70%;
 	}
   }
 
@@ -412,6 +421,9 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 		width: 100%;
 		height: 100px;
 	}
+	#navbar{
+		padding: 20px;
+	}
 	#about-text {
 		top: 40%;
 	}
@@ -423,16 +435,13 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 		color: rgb(255, 255, 255);
 		transform: translateY(800%);
 	}
-	figure{
-		width: 100%;
-		height: auto;
-	}
 	#work{
 		padding: 0 20px;
 	}
 	.normal{
 		width: 100%;
 		height: auto;
+		object-fit: cover;
 	}
 	.gowebsite img{
 		width: 100%;
@@ -446,13 +455,13 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 		font-weight: bold;
 		margin-bottom: 60px;
 	}
-	.modal{
-		margin-top: 70px;
-	}
 	.modalElem{
 		max-width: 95%;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 	.closeModal{
-		top: 15%;
+		top: 20%;
+		font-size: 38px;
 	}
 }
