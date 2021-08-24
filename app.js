@@ -1,8 +1,11 @@
 // timline animation
-const aboutimg = document.getElementById("about-img"),
-         intro = document.getElementById("about-text"),
-          menu = document.querySelectorAll("nav"),
-          topDivMenu = document.getElementById("topDivMenu"),
+const tl = gsap.timeline({default:{ease:"power1.out"}});
+tl.from("#about-img",{height:"0%",duration:1});
+tl.from(".menu",{x:"-200%",duration:1},"-=1");
+tl.to("#about-text h4",{y:"0%",duration:3,delay:.5,stagger:.25});
+// timline animation end
+
+const   topDivMenu = document.getElementById("topDivMenu"),
         gowebsite = document.querySelectorAll(".gowebsite"),
         enlarge = document.querySelectorAll(".imgbox"),
         navbar = document.getElementById("navbar"),
@@ -10,12 +13,28 @@ const aboutimg = document.getElementById("about-img"),
         topDivLogo = document.getElementById("topDivLogo"),
         topDivLogoWhite = document.getElementById("topDivLogoWhite");
 
-
-const tl = gsap.timeline({default:{ease:"power1.out"}});
-tl.from("#about-img",{height:"0%",duration:1});
-tl.from(".menu",{x:"-200%",duration:1},"-=1");
-tl.to("#about-text h4",{y:"0%",duration:3,delay:1,stagger:.25});
-// timline animation end
+//Modal
+const modalElem = document.querySelectorAll(".modalElem"),
+    modal = document.querySelectorAll(".modal"),
+    img = document.querySelectorAll(".imgbox");
+for(i=0;i<img.length;i++){
+    img[i].addEventListener("click",function(e){
+        // console.log(e.target.dataset.id);
+        // e.preventDefault();
+        const modalImg=`        
+        <div class="modalImg">
+            <img src="./${e.target.dataset.id}.png" alt="">
+        </div>
+        `
+        modalElem[0].innerHTML=modalImg;
+        modal[0].classList.remove("hide");
+        document.body.classList.add("hidden");
+    })
+}
+function closeModal(){
+    modal[0].classList.add("hide");
+    document.body.classList.remove("hidden");
+} 
 
 // Small devices menu
 function menuBtn(){

@@ -10,7 +10,7 @@
 	max-width: 1440px;
 	margin: auto;
 	display: flex;
-  font-family: 'Poppins', sans-serif;
+  	font-family: 'Poppins', sans-serif;
 	font-weight: normal;
 }
 #main {
@@ -148,8 +148,10 @@ figure{
 	width: 280px;
 	height: 220px;
 	margin: 0 auto 70px;
+	cursor: pointer;
 }
 .imgbox{
+	display: block;
 	height: 75%;
 	width: 100%;
 	overflow: hidden;
@@ -159,7 +161,7 @@ figure{
 	overflow: hidden;
 	text-align: center;
 }
-#flyer,#poster4-01{
+#flyer,#poster4-01,#banner2-01{
 	margin-top: 5%;
 }
 .enlarge{
@@ -167,11 +169,21 @@ figure{
 	position: absolute;
 	width: 120%;
 	height: auto;
-	top: 0;
+	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-10%);
+	transform: translate(-50%,-50%);
 	opacity: 0;
 	object-fit: cover;
+	z-index: 5;
+}
+.normal{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
 .gowebsite{
 	display: block;
@@ -252,9 +264,52 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 .contactBtn:hover .fas{
 	color: #fff;
 }
+.hide{
+	display: none;
+}
+.modal{
+    position: fixed;
+    z-index: 6;
+    overflow: auto;
+	width: 75%;
+	height: 100%;
+	top: 0;
+	right:0;
+	margin: auto;
+    background-color:rgb(238, 238, 238,.9);
+    padding-top: 30px;
+}
+.modalElem{
+	max-width: 60%;
+	height: auto;
+	background-color: #fff;
+	margin: auto;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 30px 0;
+	position: relative;
+}
+.closeModal{
+	position: fixed;
+	top: 10%;
+	right: 5%;
+	font-size: 52px;
+	color: #fff;
+	cursor: pointer;
+}
+.modalImg img{
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+    z-index: 6;
+}
+.hidden{
+    overflow: hidden;
+}
 @media (max-width: 1199.98px) { 
 	#about{
 		height: 50vh;
+		padding: 10% 0 5%;
 	}
 	#about-img-container{
 		height: 100%;
@@ -337,6 +392,11 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 	.contact-img{
 		width: 50vw;
 	}
+	.modal{
+		width: 100%;
+		margin-top: 90px;
+		padding: 0;
+	}
   }
 
    @media screen and (max-width:500px){
@@ -353,14 +413,14 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 		height: 100px;
 	}
 	#about-text {
-		top: 50%;
+		top: 40%;
 	}
 	#about-text h4{
 		font-size: 14px;
 		line-height: 24px;
 		letter-spacing: 1.13px;
 		font-weight: normal;
-		color: #fff;
+		color: rgb(255, 255, 255);
 		transform: translateY(800%);
 	}
 	figure{
@@ -377,5 +437,22 @@ figure:hover .enlarge,#f-1:hover .overlay,#f-2:hover .overlay,#f-3:hover .overla
 	.gowebsite img{
 		width: 100%;
 		height: auto;
+	}
+	.contact-img{
+		width: 70vw;
+	}
+	.contact-text {
+		font-size: 22px;
+		font-weight: bold;
+		margin-bottom: 60px;
+	}
+	.modal{
+		margin-top: 70px;
+	}
+	.modalElem{
+		max-width: 95%;
+	}
+	.closeModal{
+		top: 15%;
 	}
 }

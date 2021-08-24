@@ -128,21 +128,19 @@
 					</figcaption>									
 				</figure>
 				<figure id="ui" class="ui">
-					<div href="" class="imgbox">
-						<img class="enlarge" src="UI123.png">
-						<img id="UI123" class="normal" src="UI123.png">
-						
+					<div class="imgbox">
+						<img class="enlarge" src="uiModal.png" data-id="uiModal"> 
+						<img id="UI123" class="normal" src="uiModal.png">					
 					</div>
 					<figcaption id="Enterprice_War_Room_POC_demo">
-							<h4>Enterprice War Room Software Web page demo</h4>
+						<h4>Enterprice War Room Software Web page demo</h4>
 						<p>UI design</p>
-					</figcaption>
-									
+					</figcaption>									
 				</figure>
 				<figure id="g-1" class="g_1">
-					<div href="" class="imgbox">
-						<img class="enlarge" src="brochure1.png">
-						<img id="brochure1" class="normal" src="brochure1.png">
+					<div class="imgbox">
+						<img class="enlarge" src="g-1Modal.png" data-id="g-1Modal">
+						<img id="brochure1" class="normal" src="g-1Modal.png">
 					</div>			
 					<figcaption id="Brochure">
 							<h4>Brochure</h4>
@@ -150,9 +148,9 @@
 					</figcaption>									
 				</figure>
 				<figure id="g-2" class="g_2">
-					<div href="" class="imgbox">
-						<img class="enlarge" src="flyer.png">
-						<img id="flyer" class="normal" src="flyer.png">
+					<div class="imgbox">
+						<img class="enlarge" src="g-2Modal.png" data-id="g-2Modal">
+						<img id="flyer" class="normal" src="g-2Modal.png">
 					</div>
 					<figcaption id="Flyer">
 							<h4>Flyer</h4>	
@@ -160,9 +158,9 @@
 					</figcaption>							
 				</figure>
 				<figure id="g-3" class="g_3">
-					<div href="" class="imgbox">
-						<img class="enlarge" src="banner2-01.png">
-						<img id="banner2-01" class="normal" src="banner2-01.png">
+					<div class="imgbox">
+						<img class="enlarge" src="g-3Modal.png" data-id="g-3Modal">
+						<img id="banner2-01" class="normal" src="g-3Modal.png">
 					</div>
 					<figcaption id="ID2020_Taipei_Industrial_Autom">
 							<h4>2020 Taipei Industrial Automation Exhibition</h4>
@@ -170,9 +168,9 @@
 					</figcaption>										
 				</figure>
 				<figure id="g-4" class="g_4">
-					<div href="" class="imgbox">
-						<img class="enlarge" src="banner3-01.png">
-						<img id="banner3-01" class="normal" src="banner3-01.png">
+					<div class="imgbox">
+						<img class="enlarge" src="g-4Modal.png" data-id="g-4Modal">
+						<img id="banner3-01" class="normal" src="g-4Modal.png">
 					</div>
 					<figcaption id="Banner">
 							<h4>Banner</h4>
@@ -180,9 +178,9 @@
 					</figcaption>						
 				</figure>
 				<figure id="g-5" class="g_5">
-					<div href="" class="imgbox">
-						<img class="enlarge" src="pullUpPoster.png">
-						<img id="pullUpPoster" class="normal" src="pullUpPoster.png">
+					<div class="imgbox">
+						<img class="enlarge" src="g-5Modal.png" data-id="g-5Modal">
+						<img id="pullUpPoster" class="normal" src="g-5Modal.png">
 					</div>
 					<figcaption id="Pull_up_Banner">
 							<h4>Pull up Banner</h4>
@@ -190,9 +188,9 @@
 					</figcaption>										
 				</figure>
 				<figure id="g-6" class="g_6">
-					<div href="" class="imgbox">
-						<img class="enlarge" src="poster4-01.png">
-						<img id="poster4-01" class="normal" src="poster4-01.png">
+					<div class="imgbox">
+						<img class="enlarge" src="g-6Modal.png" data-id="g-6Modal">
+						<img id="poster4-01" class="normal" src="g-6Modal.png">
 					</div>
 					<figcaption id="Tri-fold_Leaflet">
 						<h4>Tri-fold Leaflet</h4>
@@ -200,9 +198,9 @@
 					</figcaption>										
 				</figure>
 				<figure id="g-7" class="g_7">
-					<div href="" class="imgbox">
-						<img class="enlarge" src="poster2-01.png">
-						<img id="poster2-01" class="normal" src="poster2-01.png">
+					<div class="imgbox">
+						<img class="enlarge" src="g-7Modal.png" data-id="g-7Modal">
+						<img id="poster2-01" class="normal" src="g-7Modal.png">
 					</div>
 					<figcaption id="Poster">
 						<h4>Poster</h4>
@@ -210,9 +208,9 @@
 					</figcaption>									
 				</figure>
 				<figure id="g-8" class="g_8">
-					<div href="" class="imgbox">
-						<img class="enlarge" src="poster3-01.png">
-						<img id="poster3-01" class="normal" src="poster3-01.png">
+					<div class="imgbox">
+						<img class="enlarge" src="g-8Modal.png" data-id="g-8Modal">
+						<img id="poster3-01" class="normal" src="g-8Modal.png">
 					</div>
 					<figcaption id="Poster_cm">
 						<h4>Poster</h4>
@@ -232,6 +230,10 @@
 					</div>
 				</div>
 			</section>
+			<div class="modal hide">
+				<i class="fas fa-times closeModal" onclick="closeModal()"></i>
+				<div class="modalElem"></div>
+			</div>
 		</main>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
