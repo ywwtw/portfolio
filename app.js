@@ -3,13 +3,6 @@ const tl = gsap.timeline({default:{ease:"power1.out"}});
 tl.from("#about-img",{height:"0%",duration:1});
 tl.from(".menu",{x:"-200%",duration:1},"-=1");
 tl.to("#about-text h4",{y:"0%",duration:3,delay:.5,stagger:.25});
-if(window.innerWidth<=1200){
-    tl.to(".textslider",{y: "-190%",duration:1})
-}
-if(window.innerWidth<=800){
-    tl.to(".textslider",{y: "-130%",duration:1})
-}
-
 // timline animation end
 
 const   topDivMenu = document.getElementById("topDivMenu"),
