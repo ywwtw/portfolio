@@ -1,0 +1,611 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	text-decoration: none;
+	color: #000;
+    list-style: none;
+}
+body{
+    background-color: rgb(237, 221, 188);
+    overflow-x: hidden;
+}
+.main{
+    max-width: 1200px;
+    /*font-size: 1em;*/
+    margin: auto;
+    font-family: bc-alphapipe, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+}
+section{
+    padding-top: 50px;
+}
+h1,h2,h3,#topDivMenu{
+    font-family: "alfarn", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.header a{
+    font-family: bc-alphapipe, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.yellow{
+    background-color: rgb(234,188,1);
+}
+.red{
+    background-color: rgb(197, 48, 36);
+}
+.blue{
+    background-color: rgb(3, 103, 187);
+}
+.bg{
+    background-color: rgb(237, 221, 188);
+}
+.gray{
+    background-color: rgb(222,221,220);
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 使用 1fr 讓每列等分 */
+    grid-template-rows: repeat(7, 1fr);   /* 使用 1fr 讓每行等分 */
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    place-content: center;
+}
+.works{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    height: 100vh;
+    /*overflow: hidden;*/
+    max-width: 100%;
+}
+#graphic2 .works{
+    height: auto;
+}
+nav{
+    grid-row: 2 ;
+    grid-column: 3 / 10;
+    margin-right: -20px;
+}
+.header{
+    height: 120px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 30px solid black;
+    border-right: 20px solid black;
+}
+.header li{
+    padding: 10px 20px 10px 0;
+    border-bottom: 5px solid black;
+    text-align: center;
+    font-size: 18px;
+}
+nav li a:hover {
+    color: rgb(88, 88, 88); 
+}
+/* 漢堡按鈕 */
+.hamburger {
+    /*margin-top: 30px;
+    grid-row: 1;
+    grid-column: 10;*/
+    position: fixed;
+    top: 5%;
+    right: 10%;
+    width: 70px;
+    max-width: 100%;
+    height: 70px;
+    z-index: 2000;
+    font-size: 20px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    padding: 20px 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: none;
+    cursor: pointer;
+}
+
+/* 彈出選單 */
+#topDivMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%); /* 初始隱藏 */
+    transition: transform 0.3s ease;
+    z-index: 3000;
+}
+
+#topDivMenu.hidden {
+    transform: translateX(100%); /* 隱藏選單 */
+}
+
+#topDivMenu.visible {
+    transform: translateX(0); /* 顯示選單 */
+}
+
+/* 選單內容 */
+.topDivLink {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.topDivLink a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* 關閉按鈕 */
+.closemenu {
+    color: #fff;
+    font-size: 20px;
+}
+#topBtn{
+    position: fixed;
+    cursor: pointer;
+    right: 10%;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    rotate: -45deg;
+    box-shadow: 10px -10px rgb(197, 48, 36);
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 1000;
+    display: none;
+    transition: all 0.3s ease;
+}
+#topBtn:hover {
+    box-shadow: 15px -15px rgb(197, 48, 36);
+    background-color: transparent;
+    border-color: transparent ;
+  }
+.introRed {
+    grid-row: 4 / 7;
+    grid-column: 4 / 7;
+    border-radius: 50%;
+    aspect-ratio: 1; /* 保持圓形 */
+    z-index: 1;
+}
+.introYellow{
+    grid-row: 5/7;
+    grid-column: 2/5;
+    margin-right: 50px;
+}
+.introText{
+    text-align: center;
+    grid-row: 5/10;
+    grid-column: 5/9;
+    z-index: 2;
+    rotate: -45deg;
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+.Hline {
+    grid-row: 5;
+    margin-bottom: -50px;
+    grid-column: 1 / 13;
+    border-bottom: 2px solid black;
+    width: 100%;
+    z-index: 2; /* 降低層級，避免遮擋 */
+}
+.Vline {
+    grid-column: 1;
+    grid-row: 1 / 7;
+    border-right: 2px solid black;
+    z-index: 2;
+}
+.introBlue{
+    grid-row: 1/4;
+    grid-column: 1;
+    width: 50px;
+    background-color: rgb(3, 103, 187);
+}
+.introBlue2 {
+    grid-row: 6/ 7;
+    grid-column: 10 / 11;
+    background-color: rgb(3, 103, 187);
+    aspect-ratio: 1; /* 適用於固定比例 */
+}
+.introTitle{
+    grid-column: 10/11;
+    grid-row: 4/5;
+    font-size: 40px;
+    margin-bottom: -50px;
+}
+.About{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    max-width: 100%;
+    /*margin-bottom: 5% 0;*/
+}
+.AboutText{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.abtl1{
+    max-height: 70%;
+    border-left: 10px solid black;
+    padding: 0 30px 30px 30px;
+    justify-content: space-around;
+    line-height: 1.5;
+}
+.abtl1 .sm{
+    margin-right: 5px;
+    display: none;
+}
+.abtl1 .sm img{
+    width: 30px;
+    height: auto;
+    margin-left: 0;
+}
+.AboutText h1{
+    margin-bottom: 20px;
+}
+.AboutYellow{
+    height: 50%;
+    border-right: 10px solid black;
+    border-top: 10px solid black;;
+    box-shadow: inset -10px 10px rgb(237, 221, 188);
+}
+.AboutHline{
+    border-bottom: 2px solid black;
+    width: 100%;
+    z-index: 2; 
+}
+.AboutEdu{
+    background-color: rgb(237, 221, 188);
+    z-index: 3;
+    padding-left:50px;
+    margin-right: 20px;
+}
+.timelineheading{
+    padding: 15px 5px;
+    text-align: center;
+    border: 10px double rgb(197, 48, 36);
+    width: 90%;
+}
+.skillsheading{
+    padding-bottom: 10px;
+    border-bottom: 10px solid  rgb(3, 103, 187);
+}
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+.skills img{
+    width: 50px;
+    height: auto;
+    margin: 10px 10px 10px 0;
+    object-fit: cover;
+}
+.timeline {
+    margin-top: 10px;
+    border-left: 3px solid black; /* 時間軸 */
+    position: relative;
+    line-height: 1;
+}
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 30px;
+}
+.timeline h3,.timeline h4{
+    margin-bottom: 5px;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: rgb(197, 48, 36);
+    border-radius: 50%;
+}
+.AboutSkills{
+    padding: 0 0 50px 0;
+    width: 60%;
+}
+.abtr{
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.work2l{
+    width: 100%;
+    height: 100%;
+}
+.work1l{
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.work1l .l1 {
+    height: 30%;
+}
+.work1l .l1 .red{
+    position: relative;
+    left: 70%;
+    top: 45%;
+    text-align: center;
+    width: 15%;
+    padding: 10px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    z-index: 0;
+}
+.work1l .l1 .text{
+    position: relative;
+    text-align: start;
+    margin: 50px;
+    z-index: 2;
+}
+.work1l .l2 {
+    height: auto;
+    padding: 50px 50px 0 50px;
+    border-left: 10px solid black;
+    margin: 50px 0 0 50px;
+}
+.work1l .l2 img{
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+    object-position: center center;
+    padding: 10px;
+}
+.work1r{
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.work1r .r1, .work1r .r2, .work1r .r3{
+    max-height: 30%;
+    max-width: 70%;
+    padding: 10%;
+    margin: 0 5%;
+    border-right: 10px solid black;
+    object-fit: cover;
+    object-position: center top;
+}
+.work1r img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+.work1r .r3{
+    box-shadow: inset -20px 0px;
+}
+.work2l,.work2r{
+    display: flex;
+    /*height: 75%;*/
+    padding: 5%;
+    justify-content: space-between;
+}
+.work2l img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.w2title{
+    margin: 50px 0 0 0;  
+}
+.w2title h1{
+    padding: 50px;
+    width: 30%;
+}
+.w2text{
+    position: relative;
+    top: -50px;
+    padding: 15px 0 0 50px;
+    border-top: 2px solid black;
+    padding: 10px 0 0 50px;
+}
+.w2text h2{
+    width: 20%;
+    text-align: left;
+    padding: 10px;
+    border-left: 20px solid rgb(197, 48, 36);
+}
+.work2r img{
+    width: 45%;
+    object-fit: cover;
+    object-position: center center;
+}
+.work3l img{
+    width: 100%;
+    flex-basis: 50%;
+    
+    object-fit: contain;
+    object-position: center center;
+}
+.work3r{
+    justify-content: space-between;
+}
+.work3r img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+}
+.work3rimg2{
+    width: 100%;
+    height: auto;
+}
+.work3rimg3{
+    width: 100%;
+    height: auto;
+}
+.work3l,.work3r{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+    padding: 5%;
+}
+.work3r .r1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+.work3text{
+    border-left: 20px solid rgb(197, 48, 36);
+    text-align: left;
+    padding: 3%;
+    margin: 10px 5px;
+}
+#contact{
+    display:flex ;
+    margin: auto;
+    align-items: center;
+}
+.contact{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    z-index: 3;
+}
+.contact li{
+    
+    padding-bottom: 10px;
+    padding-left: 25%;
+    margin: 10% 0 10% 0;
+    border-bottom: 2px solid black;
+    text-align: start;
+    cursor: pointer;
+}
+.contact li:nth-child(1){
+    margin-left: 10%;  
+    background: linear-gradient(to right, rgb(197, 48, 36)20%, rgb(237, 221, 188)20%);
+}
+.contact li:nth-child(2){  
+    margin-left: 20%; 
+    background: linear-gradient(to right, rgb(3, 103, 187) 20%, rgb(237, 221, 188)20%);
+}
+.getintouch{
+    margin:0 50px 50px 0;
+    padding: 50px;
+    line-height: 2;
+    font-size: 24px;
+    height: 120px;
+    background: linear-gradient(to right, rgb(234,188,1) 30%, rgb(237, 221, 188)30%);
+}
+@media (max-width: 1024px) {
+    .works, .contact{
+        height: auto;
+    }
+}
+@media (max-width: 992px) {
+    .introTitle{
+        font-size: 36px;
+    }
+    nav{
+        grid-row: 2;
+        grid-column: 3 / 11;
+        margin-right: 10%;
+    }
+    .abtl{
+        max-height: 100%;
+    }
+    .abtl1 .sm{
+        display: flex;
+    }
+    .abtr{
+        display: none;
+    }
+    .works,.contact{
+        height: auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(10, 1fr); /* 減少列數 */
+        grid-template-rows: repeat(6, 1fr); 
+        height: 50vh;
+        width: 100vw;
+    }
+    #topBtn{
+        display: none !important;
+    }
+    .About{
+        grid-column: 6/10;
+    }
+    .introTitle{
+        font-size: 24px;
+        grid-row: 3 / 4;
+        grid-column: 7  / 9;  
+    }
+    .introRed {
+        grid-row: 4 / 7;
+        grid-column: 3 / 6;
+    }
+    .header{
+        display: none;
+    }
+    .hamburger{
+        display: inline-grid;
+        aspect-ratio: 1;
+    }
+    .introBlue2 {
+        grid-row: 6 / 7;
+        grid-column: 7 / 9;
+    }
+    .introText{
+        font-size: 20px;
+        grid-row: 5/8;
+        grid-column: 3/7;
+    }
+    .Hline {
+        grid-row: 5;
+        grid-column: 1 / 11;
+    }
+    .Vline {
+        grid-column: 2;
+    }
+    .abtl1{
+        max-height: 100%;}
+    .getintouch{  
+        line-height: 1;}
+}
+@media (max-width: 599px) {
+    .main{
+        margin: 0;
+    }
+    .AboutYellow{
+        display: none;
+    }
+    .AboutEdu{
+        max-width: 70%;
+        margin: auto;
+    }
+}
