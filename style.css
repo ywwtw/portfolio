@@ -113,6 +113,10 @@ nav li a:hover {
     display: none;
     cursor: pointer;
 }
+.hamburger i{
+    color: white;
+    line-height: 1.5;
+}
 
 /* 彈出選單 */
 #topDivMenu {
@@ -157,25 +161,27 @@ nav li a:hover {
     color: #fff;
     font-size: 20px;
 }
+.closemenu i{
+    color: #fff
+}
 #topBtn{
     position: fixed;
     cursor: pointer;
-    right: 10%;
-    bottom: 50px;
     width: 50px;
     height: 50px;
-    rotate: -45deg;
-    box-shadow: 10px -10px rgb(197, 48, 36);
+    right: 10%;
+    bottom: 50px;
     background-color: transparent;
-    border-color: transparent;
     z-index: 1000;
     display: none;
     transition: all 0.3s ease;
 }
-#topBtn:hover {
-    box-shadow: 15px -15px rgb(197, 48, 36);
-    background-color: transparent;
-    border-color: transparent ;
+#topBtn i{
+    font-size: 50px;
+
+}
+#topBtn i:hover {
+    color:  rgb(197, 48, 36);
   }
 .introRed {
     grid-row: 4 / 7;
@@ -494,7 +500,6 @@ nav li a:hover {
     z-index: 3;
 }
 .contact li{
-    
     padding-bottom: 10px;
     padding-left: 25%;
     margin: 10% 0 10% 0;
@@ -581,9 +586,13 @@ nav li a:hover {
         grid-column: 7 / 9;
     }
     .introText{
-        font-size: 20px;
+        font-size: 18px;
         grid-row: 5/8;
-        grid-column: 3/7;
+        grid-column: 3/6;
+        line-height: 1;
+    }
+    #ui{
+        padding-top: 0;
     }
     .Hline {
         grid-row: 5;
@@ -607,5 +616,18 @@ nav li a:hover {
     .AboutEdu{
         max-width: 70%;
         margin: auto;
+    }
+    .work2r {
+        flex-direction: column;
+    }
+    .work2r img{
+        width: 100%;
+        margin: -5% auto 10% auto;
+    }
+    #graphic2{
+        padding-top: 0;
+    }
+    .work3l img{
+        margin-bottom: 5%;
     }
 }

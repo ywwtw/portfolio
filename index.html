@@ -13,7 +13,7 @@
     <div class="main">
         <section id="#">           
             <div id="topDivMenu" class="hidden">
-                <div class="closemenu" onclick="closeMenu()">X</div>
+                <div class="closemenu" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></div>
                 <div class="topDivLink">
                     <a href="#" onclick="closeMenu()">HOME</a>
                 </div>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="container">
-                <div class="hamburger" onclick="menuBtn()">三</div>
+                <div class="hamburger" onclick="menuBtn()"><i class="fa-solid fa-bars"></i></div>
                 <nav>
                     <div class="header">
                         <li><a href="#about" class="logo">ABOUT ME</a></li>
@@ -61,8 +61,7 @@
                 <div class="AboutText">
                     <div class="abtl1">
                         <h1>Hello!</h1>
-                        <p> I'm Yingwen, 
-                        a graphic designer with a growing passion for front-end development.
+                        <p> I'm a graphic designer with a growing passion for front-end development.
                         <br>My journey into the world of design began later than most, 
                         but it's been a truly rewarding experience, 
                         I'm excited to keep exploring.</p>
@@ -192,16 +191,19 @@
                 </div>
                 <div class="info">
                     <li class="email">
-                        <a href="mailto:yww85925@gmail.com" id="contactEmail" class="contactBtn">e-mail:<br> yww85925@gmail.com</a>
+                        <a href="mailto:yww85925@gmail.com" id="contactEmail" class="contactBtn">yww85925@gmail.com</a>
                     </li>
                     <li class="github">
-                        <a href="https://github.com/ywwtw" id="contactGithub" class="contactBtn">github:<br> https://github.com/ywwtw</a>
+                        <a href="https://github.com/ywwtw" id="contactGithub" class="contactBtn">https://github.com/ywwtw</a>
                     </li>
                 </div>
             </div>
         </section>
-        <button onclick="scrollToTop()" id="topBtn" title="Go to top"></button>
+        <button onclick="scrollToTop()" id="topBtn" title="Go to top">
+            <i class="fa-solid fa-circle-up"></i>
+        </button>
     </div>
     <script src="./app.js"></script>
+    <script src="https://kit.fontawesome.com/790ddc39d1.js" crossorigin="anonymous"></script>
 </body>
 </html>
