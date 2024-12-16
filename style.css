@@ -263,6 +263,9 @@ nav li a:hover {
     height: auto;
     margin-left: 0;
 }
+.abtl1 .sm .figma img{
+    width: 25px;
+}
 .AboutText h1{
     margin-bottom: 20px;
 }
@@ -304,6 +307,10 @@ nav li a:hover {
     height: auto;
     margin: 10px 10px 10px 0;
     object-fit: cover;
+}
+.figma img{
+    width: 40px;
+    margin-left: 5px;
 }
 .timeline {
     margin-top: 10px;
